@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://assets.queue-it.net/ticketmastertest/userdata/layout/CustomLayout/v02/top03.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+  <style>
+    @font-face {
+      font-family: 'TM Sans';
+      src: url('TMSans-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'TM Sans';
+      src: url('TMSans-SemiBold.woff') format('woff');
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      background-color: #009cde;
+      background-image: linear-gradient(to right, #009cde, #535dc6);
+      font-family: 'TM Sans';
+    }
+
+    .top-logo-container {
+      padding: 12px 14px;
+      overflow: auto;
+    }
+
+    #left {
+      float: left;
+    }
+
+    #right {
+      float: right;
+    }
+
+    #logoImg {
+      width: 133px;
+      padding: 0px 0 4px 11px;
+    }
+
+    .img {
+      vertical-align: middle;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body cz-shortcut-listen="true">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4QMLG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="top-logo-container">
+    <div id="left">
+      <svg class="img" style="display:inline-block;vertical-align:middle" width="20px" height="20px" viewBox="0 0 1024 1024" aria-label="Menu Icon" data-tid="headerHamburgerIcon">
+        <path style="fill:#fff" d="M46.438 248.371h931.123c12.544 0 23.859-4.71 32.819-13.619 8.909-8.96 13.619-20.275 13.619-32.819 0-12.954-4.71-24.474-13.619-33.382s-20.224-13.619-32.819-13.619h-931.123c-12.544 0-23.859 4.71-32.819 13.619-8.909 8.909-13.619 20.429-13.619 33.382 0 12.544 4.71 23.859 13.619 32.768s20.275 13.67 32.819 13.67z"></path>
+        <path style="fill:#fff" d="M977.562 775.629h-931.123c-12.544 0-23.859 4.71-32.819 13.619-8.909 8.96-13.619 20.48-13.619 33.434 0 12.544 4.71 23.859 13.619 32.819 8.909 8.909 20.224 13.619 32.819 13.619h931.123c12.544 0 23.859-4.71 32.819-13.619 8.909-8.96 13.619-20.275 13.619-32.819 0-12.954-4.71-24.474-13.619-33.382s-20.275-13.67-32.819-13.67z"></path>
+        <path style="fill:#fff" d="M977.562 465.254h-931.123c-12.544 0-23.859 4.71-32.819 13.619-8.909 8.96-13.619 20.48-13.619 33.434 0 12.544 4.71 23.859 13.619 32.819 8.909 8.909 20.224 13.619 32.819 13.619h931.123c12.544 0 23.859-4.71 32.819-13.619 8.909-8.96 13.619-20.275 13.619-32.819 0-12.954-4.71-24.474-13.619-33.382-8.909-8.96-20.275-13.67-32.819-13.67z"></path>
+      </svg>
+      <img class="img" id="logoImg" src="top_data/TM-WhiteLogo-133.png">
+    </div>
+    <div id="right">
+      <a href="https://www.ticketmaster.com/member/" target="_blank">
+        <span>Sign in</span>
+      </a>
+      <a href="http://help.ticketmaster.com/" target="_blank">
+        <span>Help</span>
+      </a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="top_data/customdata.js"></script>
+  <script src="top_data/fp.js"></script>
+  <script>
+    function onEnqueuedSuccess(queueId) { }
+    function onEnqueueFailed(error) {
+      console.log('enqueue failed:', error);
+    }
+    function enqueue(fingerprint) {
+      var customDataClient = new QueueIt.Javascript.CustomData.CustomDataClient();
+      customDataClient.enqueue(fingerprint, '', [{ 'fingerprint': fingerprint }, { 'weight': '50' }], onEnqueuedSuccess, onEnqueueFailed);
+    }
+    if (typeof Fingerprint2 === typeof (Function)) {
+      new Fingerprint2().get(function (result, components) {
+        enqueue(result);
+      });
+    }
+    else {
+      enqueue("n/a");
+    }
+  </script>
+
+
+</body></html>
